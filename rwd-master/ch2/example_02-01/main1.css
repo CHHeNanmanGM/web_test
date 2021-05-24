@@ -1,0 +1,28 @@
+body {
+    background-color: aqua;
+}
+
+@media screen and (min-width:320px) {
+    body {
+        background-color: rgb(22, 22, 203);
+    }
+}
+
+@media screen and (min-width: 550px) {
+    body {
+        background-color: rgb(201, 107, 19);
+    }
+}
+
+@media screen and (min-width:768) {
+    body {
+        background-color: rgb(19, 201, 46);
+    }
+}
+
+/* 视口宽度适用范围 最小值为960px  */
+@media screen and (min-width:960px) {
+    body{
+        background-color:  rgb(213, 12, 136);
+    }
+}

@@ -1,0 +1,121 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>An example from http://rwd.education</title>
+    <meta name="description"
+        content="An example from the book, 'Responsive Web Design with HTML5 and CSS3' by Ben Frain">
+    <meta name="viewport" content="width=device-width">
+    <meta name="theme-color" content="#ff9900">
+    <style>
+        .flipper {
+            perspective: 400px;
+            position: relative;
+            height: 44px;
+            width: 300px;
+        }
+
+        .flipper-object {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            transition: all 1s;
+        }
+
+        .panel {
+            top: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 44px;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            backface-visibility: hidden;
+        }
+
+        .flipper-vertical .front {
+            background-color: green;
+        }
+
+        .flipper-horizontal .front {
+            background-color: green;
+        }
+
+        .flipper-vertical .back {
+            background-color: red;
+            transform: rotateX(180deg);
+        }
+
+        .flipper-horizontal .back {
+            background-color: red;
+            transform: rotateY(180deg);
+        }
+
+        .flipper:hover .flipper-vertical {
+            transform: rotateX(180deg);
+        }
+
+        .flipper:hover .flipper-horizontal {
+            transform: rotateY(180deg);
+        }
+
+        .flipper+.flipper {
+            margin-top: 1rem;
+        }
+
+        .posi {
+            position: absolute;
+            left: 2in;
+            top: 2in;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flipper">
+        <span class="flipper-object flipper-vertical">
+            <span class="panel front">The Front</span>
+            <span class="panel back">The Back</span>
+        </span>
+    </div>
+
+    <div class="flipper">
+        <span class="flipper-object flipper-horizontal">
+            <span class="panel front">The Front</span>
+            <span class="panel back">The Back</span>
+        </span>
+    </div>
+
+
+    <div style="display: inline;">
+        <div style="display: block;width: 100px;height: 100px; border: 1px solid ;"></div>
+        <div style="display: inline;width: 100px;height: 100px; border: 1px solid ;">22</div>
+    </div>
+
+    <div style="position: relative;">
+        <div class="posi" style="width: 100px;height: 100px;background-color: aquamarine;z-index: 1"></div>
+        <div class="posi" style="width: 200px;height: 200px;background-color: bisque;"></div>
+    </div>
+
+
+    <script>
+        var a = 1;
+        function fn() {
+            console.log(this.a);
+        }
+        var o = {
+            a: 2,
+            fn: fn
+        };
+        o.fn();
+        fn();
+
+
+    </script>
+
+</body>
+
+</html>

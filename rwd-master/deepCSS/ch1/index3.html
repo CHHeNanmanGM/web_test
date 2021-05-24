@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>响应式块</title>
+    <link rel="shortcut icon" href="../../static/Coca-Cola.png" type="image/x-icon">
+    <link rel="icon" href="../../static/Coca-Cola.png" type="image/x-icon">
+    <style>
+        /* 文字rem 边框 像素 圆角边距 em */
+        :root {
+            /* 默认像素16px 采用像素14px */
+            font-size: .875em;
+            transition: all .8s;
+        }
+
+        @media screen and (max-width:762px) {
+            :root {
+                /* 默认像素16px 采用像素14px */
+                /* font-size: .75em; */
+            }
+
+        }
+
+        @media screen and (min-width:1200px) {
+            :root {
+                /* 默认像素16px 采用像素14px */
+                /* font-size: 1em; */
+            }
+
+        }
+
+        body {}
+
+        .bl {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            width: 70%;
+            border: 1px solid;
+            border-radius: 0.5em;
+            padding: 1em;
+            margin: 0 auto;
+        }
+
+        .title {
+            margin-top: 0;
+        }
+
+        .vw {
+            /* font-size: calc(0.5em + 1vw); */
+            font-size: 1vw;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bl">
+        <h2 class="title">你可以不成功，但是不能不成长</h2>
+        <div class="text">
+            我还记得我第一次采访基辛格博士，那时我还在美国留学，刚刚开始做访谈节目，特别没有经验。问的问题都是东一榔头，西一棒子的，比如问：那时周总理请你吃北京烤鸭，你吃了几只啊?(全场笑)你一生处理了很多重大的外交事件，你最骄傲的是什么?当然我也在电视上看过别人问这类问题。凡是问这类问题，就是事先没做准备。后来在中美建交三十周年时，我再次采访了基辛格博士。那时我就知道再也不能问北京烤鸭这类问题了。虽然只有半小时，我们的团队把所有有关的资料都搜集了，从他在哈佛当教授时的论文、演讲。
+        </div>
+    </div>
+
+
+    <div class="vw">
+        我还记得我第一次采访基辛格博士，那时我还在美国留学，刚刚开始做访谈节目，特别没有经验。问的问题都是东一榔头，西一棒子的，比如问：那时周总理请你吃北京烤鸭，你吃了几只啊?(全场笑)你一生处理了很多重大的外交事件，你最骄傲的是什么?当然我也在电视上看过别人问这类问题。凡是问这类问题，就是事先没做准备。后来在中美建交三十周年时，我再次采访了基辛格博士。那时我就知道再也不能问北京烤鸭这类问题了。虽然只有半小时，我们的团队把所有有关的资料都搜集了，从他在哈佛当教授时的论文、演讲。
+    </div>
+
+
+
+</body>
+
+</html>

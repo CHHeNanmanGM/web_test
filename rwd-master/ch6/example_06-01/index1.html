@@ -1,0 +1,133 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>An example from http://rwd.education</title>
+    <meta name="description"
+        content="An example from the book, 'Responsive Web Design with HTML5 and CSS3' by Ben Frain">
+    <meta name="viewport" content="width=device-width">
+    <meta name="theme-color" content="#ff9900">
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <style>
+        .tshadow {
+            text-shadow: 30px 1px 4px hsla(0, 100%, 63%, 1),
+                -30px 1px 4px hsla(0, 100%, 63%, 1);
+            color: rgb(0, 0, 0);
+            margin: 0 auto;
+            width: 400px;
+        }
+
+        .box-shadow,
+        .inner-box-shadow {
+            height: 20vmin;
+            width: 20vmin;
+            border: 1px solid #111;
+            margin: 1em;
+            display: inline-flex;
+            font-family: sans-serif;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .box-shadow {
+            box-shadow: 3px 1px 2px hsla(),
+                3px 1px 2px red;
+        }
+
+        .inner-box-shadow {
+            box-shadow: inset 0 0 20px green,
+                inset 0 0 20px red;
+
+        }
+
+        .grad {
+            background: linear-gradient(red, yellow);
+            height: 400px;
+        }
+
+        .grad2 {
+            background: linear-gradient(#f90 0,
+                    #f90 2%,
+                    #555 2%,
+                    #eee 50%,
+                    #555 98%,
+                    #f90 98%,
+                    #f90 100%);
+            height: 400px;
+        }
+
+        .grad3 {
+            background: radial-gradient(100px circle at top 100px right 100px,
+                    red 0,
+                    red 20%,
+                    orange 20%,
+                    orange 40%,
+                    yellow 40%,
+                    yellow 50%,
+                    green 50%,
+                    green 80%,
+                    blue 80%,
+                    blue 90%,
+                    purple 90%,
+                    purple 95%,
+                    #f90 95%,
+                    #f90 100%);
+            height: 200px;
+            width: 200px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .grad5 {
+            background: repeating-radial-gradient(rgb(186, 67, 223) 0px, rgb(233, 198, 133) 5px, rgb(230, 128, 128) 10px);
+            height: 200px;
+            width: 200px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .grad4 {
+            background: linear-gradient(45deg, red, yellow);
+            height: 400px;
+        }
+
+        .grad6 {
+            margin: 1rem;
+            width: 400px;
+            height: 200px;
+            background:
+                radial-gradient(black 15%, transparent 16%) 0 0,
+                radial-gradient(black 15%, transparent 16%) 8px 8px,
+                radial-gradient(rgba(255, 255, 255, .1) 15%, transparent 20%) 0 1px,
+                radial-gradient(rgba(255, 255, 255, .1) 15%, transparent 20%) 8px 9px;
+            background-color: #282828;
+            background-size: 16px 16px;
+        }
+
+        .grad6 p {
+            margin: auto;
+            font-size: 2rem;
+            color: white;
+            font-family: 'Oswald', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tshadow">
+        <h1>this is a Test.</h1>
+    </div>
+    <div class="box-shadow">Outer box-shadow</div>
+    <div class="inner-box-shadow">Inner box-shadow</div>
+    <div class="grad"></div>
+    <div class="grad2"></div>
+    <div class="grad3"></div>
+    <div class="grad5"></div>
+    <div class="grad4"></div>
+    <div class="grad6">
+        <p>Thanks!</p>
+    </div>
+</body>
+
+</html>

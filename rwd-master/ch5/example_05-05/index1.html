@@ -1,0 +1,53 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <meta name="theme-color" content="#ff9900">
+
+    <style>
+        span {
+            display: inline-block;
+            height: 2rem;
+            width: 2rem;
+            background-color: blue;
+        }
+
+        /* span:first-child {
+            background-color: yellow;
+        } */
+
+        /* span:last-child {
+            background-color: yellow;
+        } */
+        /* 
+        span:nth-child(odd) {
+            background-color: yellow;
+        } */
+        /* span:nth-child(even) {
+            background-color: yellow;
+        } */
+        /* 非索引 是顺序 */
+        span:nth-child(-3n+1) {
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</body>
+
+</html>

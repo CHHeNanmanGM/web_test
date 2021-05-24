@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <link href='http://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
+    <meta charset="utf-8">
+    <title>Layout example</title>
+    <meta name="viewport" content="width=device-width">
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .MenuWrap {
+            display: flex;
+            min-height: 2.75rem;
+            font-size: 1rem;
+            font-family: 'Oswald', sans-serif;
+            background-color: indigo;
+            align-items: center;
+            flex-direction: column;
+            /* justify-content: center; */
+        }
+
+        @media (min-width:31rem) {
+            .MenuWrap {
+                flex-direction: row;
+            }
+
+            .ListItem {
+                margin-right: 1rem;
+            }
+
+            .LastItem {
+                margin-left: auto;
+            }
+
+        }
+
+        .ListItem,
+        .LastItem {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* .ListItem {
+            margin-left: .5rem;
+        }
+
+        .LastItem {
+            margin-left: auto;
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="MenuWrap">
+        <a href="#" class="ListItem">Home</a>
+        <a href="#" class="ListItem">About Us</a>
+        <a href="#" class="ListItem">Products</a>
+        <a href="#" class="ListItem">Policy</a>
+        <a href="#" class="LastItem">Contact Us</a>
+    </div>
+</body>
+
+</html>

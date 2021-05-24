@@ -1,0 +1,30 @@
+/* 可以使用import 导入其它样式表 并且后者并没有将前者样式覆盖 */
+
+@import url(main1.css);
+body {
+  background-color: grey;
+}
+
+@media screen and (min-width: 320px) {
+  body {
+    background-color: green;
+  }
+}
+
+@media screen and (min-width: 550px) {
+  body {
+    background-color: yellow;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    background-color: orange;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  body {
+    background-color: red;
+  }
+}

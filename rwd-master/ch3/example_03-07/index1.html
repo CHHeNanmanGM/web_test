@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<link href='http://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
+	<meta charset="utf-8">
+	<title>Layout example</title>
+	<meta name="viewport" content="width=device-width">
+	<!-- <link rel="stylesheet" href="styles.css"> -->
+	<style>
+		.FlexWrapper {
+			display: flex;
+			height: 200px;
+			flex-direction: row;
+			align-items: flex-start;
+			justify-content: center;
+			background-color: blueviolet;
+		}
+
+		.FlexItems {
+			height: 100px;
+			width: 25%;
+			color: white;
+			font-size: 1.5rem;
+			font-family: 'Oswald', sans-serif;
+		}
+
+		.Flexbot {
+			align-self: flex-end;
+		}
+
+		.FlexOne {
+			flex: 1 0 300px;
+		}
+		.FlexTwo,
+		.FlexThree {
+			flex: 1.5 0 auto;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="FlexWrapper">
+		<div class="FlexItems FlexOne">I am content in the inner Flexbox 1.</div>
+		<div class="FlexItems FlexTwo  Flexbot ">I am content in the inner Flexbox 2.</div>
+		<div class="FlexItems FlexThree">I am content in the inner Flexbox 3.</div>
+	</div>
+</body>
+
+</html>
