@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="shortcut icon" href="../../static/Coca-Cola.png" type="image/x-icon">
+    <link rel="icon" href="../../static/Coca-Cola.png" type="image/x-icon">
+    <link rel="stylesheet" href="../commonCSS/common.css" type="text/css">
+    <style>
+        :root {
+            --color: #10476b;
+            --fontColor: white;
+        }
+
+
+        .head {
+            background-color: var(--color);
+            color: var(--fontColor);
+            font-weight: bold;
+            border-radius: .1em;
+            padding: 0 5px;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        .side {
+            background-color: var(--color);
+            color: var(--fontColor);
+            font-weight: bold;
+            padding: .3em;
+        }
+
+        main {
+            display: inline-block;
+            width: 79%;
+        }
+
+        aside {
+            display: inline-block;
+            width: 19%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 语义化标签  -->
+    <header class="head">
+        <h1>Block Module</h1>
+    </header>
+    <div>
+        <main>
+            <h2>part1</h2>
+            <p>
+                this is Part1.
+            </p>
+        </main>
+        <aside>
+            <div class="side"></div>
+            <div class="side"></div>
+        </aside>
+    </div>
+
+    <footer>
+
+    </footer>
+
+
+
+    <script>
+
+
+    </script>
+</body>
+
+</html>
