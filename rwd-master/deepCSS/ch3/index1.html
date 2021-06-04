@@ -15,7 +15,6 @@
             --fontColor: white;
         }
 
-
         .head {
             background-color: var(--color);
             color: var(--fontColor);
@@ -24,8 +23,20 @@
             padding: 0 5px;
         }
 
-        h1 {
+        #first h1 {
             margin: 0;
+        }
+
+        #first .con {
+            display: table;
+            width: 100%;
+            margin-top: .5rem;
+            border-spacing: 1.5em 0;
+        }
+
+        #first .war {
+            margin-left: -1.5em;
+            margin-right: -1.5em;
         }
 
         .side {
@@ -35,47 +46,120 @@
             padding: .3em;
         }
 
-        main {
-            display: inline-block;
-            width: 79%;
+        .side+.side {
+            margin-top: 10px;
         }
 
-        aside {
+
+        #first main {
+            display: table-cell;
+            width: 70%;
+            border-radius: .5em;
+            background-color: #fff;
+        }
+
+        #first aside {
+            display: table-cell;
+            width: 30%;
+            padding: 1.5em;
+            border-radius: .5em;
+            background-color: #fff;
+        }
+
+        #second .con {
+            display: flex;
+        }
+
+        #second main {
+            padding: 1.5em;
+            border-radius: .5em;
+            background-color: #fff;
+            width: calc(70% - 1.5em);
+        }
+
+        #second aside {
+            padding: 1.5em;
+            margin-left: 1.5em;
+            border-radius: .5em;
+            background-color: #fff;
+            width: 30%;
+        }
+
+        .center {
+            /* vertical-align: top; */
+        }
+
+        .block {
             display: inline-block;
-            width: 19%;
-            height: 100%;
+            width: 100px;
+            height: 100px;
+            border: 1px solid;
+        }
+
+        .block:nth-child(2n) {
+            background-color: yellow;
+        }
+
+        #b1 {
+            margin-top: -30px;
         }
     </style>
 </head>
 
 <body>
+
     <!-- 语义化标签  -->
-    <header class="head">
-        <h1>Block Module</h1>
-    </header>
-    <div>
-        <main>
-            <h2>part1</h2>
-            <p>
-                this is Part1.testUpdate阿萨大·1
-            </p>
-        </main>
-        <aside>
-            <div class="side"></div>
-            <div class="side"></div>
-        </aside>
+    <div id="first">
+        <header class="head">
+            <h1>Block Module</h1>
+        </header>
+        <div class="war">
+            <div class="con">
+                <main>
+                    <h2>part1</h2>
+                    <p>
+                        this is Part1.
+                    </p>
+                </main>
+                <aside>
+                    <div class="side">focus me！</div>
+                    <div class="side">follow Us!</div>
+                    <div class="side">follow Us!</div>
+                </aside>
+            </div>
+        </div>
     </div>
+    <!-- <div id="second"> 
+        <header class="head">
+            <h1>Block Module</h1>
+        </header>
+        <div class="con">
+            <main>
+                <h2>part1</h2>
+                <p>
+                    this is Part1.
+                </p>
+            </main>
+            <aside>
+                <div class="side">focus me！</div>
+                <div class="side">follow Us!</div>
+                <div class="side">follow Us!</div>
+                <div class="side">follow Us!</div>
+            </aside>
+        </div>
+    </div> -->
+    <!-- <div style="width: 100px;border: 1px solid;">
+        拉萨的拉链大量的两大势力的了拉斯大陆
+    </div> -->
 
-    <footer>
-
-    </footer>
-
-
-
-    <script>
-
-
-    </script>
+    <!-- <div class="center">
+        <img src="../../static/Coca-Cola.png" alt="可乐" width="30px" height="30px" style="display: inline;" />
+        <div style='display: inline;'>asdasdasda</div>
+    </div> -->
+    <div>
+        <div class="block" id="b1"></div>
+        <div class="block"></div>
+    </div>
 </body>
 
 </html>
