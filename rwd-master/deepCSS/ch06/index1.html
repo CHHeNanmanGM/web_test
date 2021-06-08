@@ -1,0 +1,259 @@
+<!doctype html>
+
+<head>
+    <style>
+        :root {
+            box-sizing: border-box;
+        }
+
+        *,
+        ::before,
+        ::after {
+            box-sizing: inherit;
+        }
+
+        body {
+            background-color: #709b90;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        body *+* {
+            margin-top: 1.5em;
+        }
+
+        .container {
+            max-width: 1080px;
+            margin: 0 auto;
+            display: grid;
+            grid-gap: 1em;
+            grid-template-columns: 3fr 1fr;
+            grid-template-rows: repeat(5, auto);
+        }
+
+        header {
+            grid-column: 1/3;
+            grid-row: 1/2;
+        }
+
+        nav {
+            margin-top: 0;
+            grid-column: 1/3;
+            grid-row: 2/3;
+        }
+
+        .column-main {
+            margin-top: 0;
+            flex: 1;
+            grid-column: 1/2;
+            grid-row: 3/5;
+        }
+
+        .login {
+            margin-top: 0;
+            grid-column: 2/3;
+            grid-row: 3/4;
+        }
+
+        .centered {
+            margin-top: 0;
+            grid-column: 2/3;
+            grid-row: 4/5;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .site-nav {
+            margin: 0;
+            display: flex;
+            padding-left: 0;
+            list-style-type: none;
+            background-color: #5f4b44;
+            padding: .5em 1em;
+            border-radius: .2em;
+        }
+
+        .site-nav>li {
+            margin-top: 0;
+        }
+
+        .site-nav>li+li {
+            margin-left: 1.5em;
+        }
+
+        .site-nav>li>a {
+            display: block;
+            padding: .5em 1em;
+            text-decoration: none;
+            color: white;
+            background-color: #cc6b5a;
+        }
+
+        .site-nav>.nav-right {
+            margin-left: auto;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .flex>*+* {
+            margin-top: 0;
+            margin-left: 1.5em;
+        }
+
+        .tile {
+            padding: 1.5em;
+            background-color: white;
+        }
+
+
+        .column-sidebar {
+            display: flex;
+            flex-direction: column;
+        }
+
+
+
+        small {
+            text-transform: uppercase;
+            text-align: center;
+            color: #cc6b5a;
+            font-weight: bold;
+        }
+
+        .cost {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            line-height: .7;
+            font-weight: bold;
+        }
+
+        .cost-currency {
+            margin-top: 0;
+            font-size: 2rem;
+        }
+
+        .cost-dollars {
+            margin-top: 0;
+            font-size: 4rem;
+        }
+
+        .cost-cents {
+            margin-top: 0;
+            font-size: 1.5rem;
+            align-self: flex-start;
+        }
+
+
+
+
+
+        .login-form h3 {
+            text-align: right;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin: 0;
+        }
+
+        .login-form input:not([type='radio']):not([type='checkbox']) {
+            display: block;
+            margin-top: 0;
+            width: 100%;
+        }
+
+        .login-form button {
+            margin-top: 1em;
+            border: 1px solid #cc6b5a;
+            background-color: white;
+            padding: .5em 1em;
+            cursor: pointer;
+        }
+
+        .login-form button:hover {
+            color: white;
+            background-color: #cc6b5a;
+
+        }
+
+        .cta-button {
+            display: block;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+            padding: .5em 1em;
+            background-color: #cc6b5a;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Ink</h1>
+        </header>
+        <nav>
+            <ul class="site-nav">
+                <li><a href="/">Home</a></li>
+                <li><a href="/features">Features</a></li>
+                <li><a href="/pricing">Pricing</a></li>
+                <li><a href="/support">Support</a></li>
+
+                <li class="nav-right">
+                    <a href="/about">About</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="column-main tile">
+            <h1>Team collaboration done right</h1>
+            <p>Thousands of teams from all over the
+                world turn to <b>Ink</b> to communicate
+                and get things done.</p>
+            <h1>Team collaboration done right</h1>
+            <p>Thousands of teams from all over the
+                world turn to <b>Ink</b> to communicate
+                and get things done.</p>
+            <h1>Team collaboration done right</h1>
+            <p>Thousands of teams from all over the
+                world turn to <b>Ink</b> to communicate
+                and get things done.</p>
+            <h1>Team collaboration done right</h1>
+            <p>Thousands of teams from all over the
+                world turn to <b>Ink</b> to communicate
+                and get things done.</p>
+        </div>
+        <div class="tile login">
+            <form class="login-form">
+                <h3>Login</h3>
+                <p>
+                    <label for="username">Username</label>
+                    <input id="username" type="text" name="username" />
+                </p>
+                <p>
+                    <label for="password">Password</label>
+                    <input id="password" type="password" name="password" />
+                </p>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+        <div class="tile centered">
+            <small>Starting at</small>
+            <div class="cost">
+                <span class="cost-currency">$</span>
+                <span class="cost-dollars">20</span>
+                <span class="cost-cents">.00</span>
+            </div>
+            <a class="cta-button" href="/pricing">
+                Sign up
+            </a>
+        </div>
+        <div style="height:100px;width:100px;display:flex;flex-direction:column;border: 1px solid white;">
+            <div style="width: 20px;height: 20px;background-color: red;"></div>
+            <div style="width: 20px;height: 20px;background-color: red;margin-top:0;">
+            </div>
+        </div>
+    </div>
+
+
+</body>
