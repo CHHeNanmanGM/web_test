@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="shortcut icon" href="../../static/Coca-Cola.png" type="image/x-icon">
+    <link rel="icon" href="../../static/Coca-Cola.png" type="image/x-icon">
+    <link rel="stylesheet" href="../commonCSS/common.css" type="text/css">
+    <style>
+        @keyframes roll-back {
+            0% {
+                background-color: red;
+                transform: translate(0);
+            }
+
+            50% {
+                /* transform: translate(300px); */
+            }
+
+            100% {
+                background-color: green;
+                transform: translate(0);
+            }
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            animation: roll-back 2s linear 3;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+    </div>
+</body>
+
+</html>
